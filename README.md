@@ -13,8 +13,7 @@ SELECT device_id, operating_system
 FROM machines
 WHERE operating_system = 'OS 1';
 ```
+```text
 sql-query-filtering/
 ├── basic-filters.sql     # Comprehensive collection of filtered SQL queries from the lab  
 └── README.md             # Overview and usage examples for the project
----
-Consider including an additional query using `LIKE` or `BETWEEN` to showcase more variety, or add a terminal screenshot for extra depth. This is coming together nicely—keep up the great work!
