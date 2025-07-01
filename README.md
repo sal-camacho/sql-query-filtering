@@ -1,2 +1,19 @@
-# SQLquery
-Knowing how to make better queries to retrieve specific pieces of data can help find the security-related information I need more efficiently.  In this lab activity, I applied basic filters to SQL queries to retrieve information from a MariaDB database.  MariaDB is a popular open source relational database that is compatible with MySQL.
+# SQL Query Filtering
+
+This project demonstrates hands-on experience filtering data in a MariaDB database using SQL. It emphasizes the use of `WHERE`, `AND`, `OR`, `LIKE`, and `BETWEEN` clauses to refine queries—critical skills for information security and diagnostics.
+
+## 🧰 Environment
+- **Database**: MariaDB 10.3 (Debian)
+- **Platform**: Linux CLI via MariaDB Monitor
+- **Objective**: Efficiently retrieve targeted security-related data through query filtering
+
+## 📄 Example Query
+```sql
+SELECT device_id, operating_system
+FROM machines
+WHERE operating_system = 'OS 1';
+sql-query-filtering/
+├── basic-filters.sql     # Comprehensive collection of filtered SQL queries from the lab  
+└── README.md             # Overview and usage examples for the project
+---
+Consider including an additional query using `LIKE` or `BETWEEN` to showcase more variety, or add a terminal screenshot for extra depth. This is coming together nicely—keep up the great work!
