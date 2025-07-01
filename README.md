@@ -12,6 +12,7 @@ This project demonstrates hands-on experience filtering data in a MariaDB databa
 SELECT device_id, operating_system
 FROM machines
 WHERE operating_system = 'OS 1';
+```
 sql-query-filtering/
 ├── basic-filters.sql     # Comprehensive collection of filtered SQL queries from the lab  
 └── README.md             # Overview and usage examples for the project
