@@ -1,6 +1,6 @@
 # SQL Query Filtering
 
-This project demonstrates hands-on experience filtering data in a MariaDB database using SQL. It emphasizes the use of `WHERE`, `AND`, `OR`, `LIKE`, and `BETWEEN` clauses to refine queries—critical skills for information security and diagnostics.
+This project demonstrates hands-on experience filtering data in a MariaDB database using SQL. It emphasizes the use of `SELECT`, `FROM`, `WHERE`, and `LIKE` clauses to refine queries—critical skills for information security and diagnostics.
 
 ## 🧰 Environment
 - **Database**: MariaDB 10.3 (Debian)
