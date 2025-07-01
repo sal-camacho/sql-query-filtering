@@ -1,4 +1,4 @@
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date > '2022-05-09';
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -132,7 +132,7 @@ MariaDB [organization]> SELECT*
 +----------+----------+------------+------------+---------+-----------------+---------+
 125 rows in set (0.001 sec)
 
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date >= '2022-05-09';
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -306,7 +306,7 @@ MariaDB [organization]> SELECT*
 +----------+----------+------------+------------+---------+-----------------+---------+
 165 rows in set (0.001 sec)
 
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date BETWEEN '2022-05-09' AND '2022-05-11';
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -438,7 +438,7 @@ MariaDB [organization]> SELECT*
 +----------+----------+------------+------------+---------+-----------------+---------+
 123 rows in set (0.001 sec)
 
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_time < '07:00:00';
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -514,7 +514,7 @@ MariaDB [organization]> SELECT*
 +----------+----------+------------+------------+---------+-----------------+---------+
 67 rows in set (0.001 sec)
 
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_time BETWEEN '06:00:00' AND '07:00:00';
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -538,7 +538,7 @@ MariaDB [organization]> SELECT*
 +----------+----------+------------+------------+---------+-----------------+---------+
 15 rows in set (0.001 sec)
 
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE event_id >=100;
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -648,7 +648,7 @@ MariaDB [organization]> SELECT*
 +----------+----------+------------+------------+---------+-----------------+---------+
 101 rows in set (0.025 sec)
 
-MariaDB [organization]> SELECT*
+MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE event_id BETWEEN '100' AND '150';
 +----------+----------+------------+------------+---------+-----------------+---------+
