@@ -1,15 +1,3 @@
-clear
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 41
-Server version: 10.3.39-MariaDB-0+deb10u2 Debian 10
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
 MariaDB [organization]> clear
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -122,19 +110,7 @@ MariaDB [organization]> SELECT *
 |      197 | jsoto    | 2022-05-08 | 09:05:09   | US      | 192.168.36.21   |       0 |
 +----------+----------+------------+------------+---------+-----------------+---------+
 75 rows in set (0.009 sec)
-
-MariaDB [organization]> SELECT *
-    -> FROM log_in_attempts
-    -> WHERE NOT 'MEXICO' LIKE 'MEX%';
-Empty set (0.046 sec)
-
-MariaDB [organization]> SELECT*
-    -> ;
-ERROR 1096 (HY000): No tables used
-MariaDB [organization]> SELECT *
-    -> FROM log_in_attempts
-    -> WHERE NOT country LIIKE 'MEX%';
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIIKE 'MEX%'' at line 3
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE NOT country LIKE 'MEX%';
@@ -495,40 +471,7 @@ MariaDB [organization]> SELECT *
 |        1199 | r520s571t459 | areyes   | Human Resources        | East-100    |
 +-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.002 sec)
-
-MariaDB [organization]> SELECT * 
-    -> FROM employees 
-    -> WHERE 'Marketing' department AND 'East-170' LIKE 'East-320;
-    '> ;
-    '> 'DONE';
-    '> 
-    '> WHERE 'Marketing' department AND 'East-170' LIKE 'East-320;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'department AND 'East-170' LIKE 'East-320;
-;
-'DONE';
-
-WHERE 'Marketing' depart...' at line 3
-MariaDB [organization]> SELECT *
-    -> FROM employees
-    -> WHERE 'Marketing' = department AND office like 'East%';
-+-------------+--------------+----------+------------+----------+
-| employee_id | device_id    | username | department | office   |
-+-------------+--------------+----------+------------+----------+
-|        1000 | a320b137c219 | elarson  | Marketing  | East-170 |
-|        1052 | a192b174c940 | jdarosa  | Marketing  | East-195 |
-|        1075 | x573y883z772 | fbautist | Marketing  | East-267 |
-|        1088 | k865l965m233 | rgosh    | Marketing  | East-157 |
-|        1103 | NULL         | randerss | Marketing  | East-460 |
-|        1156 | a184b775c707 | dellery  | Marketing  | East-417 |
-|        1163 | h679i515j339 | cwilliam | Marketing  | East-216 |
-+-------------+--------------+----------+------------+----------+
-7 rows in set (0.004 sec)
-
-MariaDB [organization]> SELECT *
-    -> FROM employees
-    -> WHERE 'Marketing' = department AND office LIKE 'East&';
-Empty set (0.001 sec)
-
+    
 MariaDB [organization]> SELECT * 
     -> FROM employees
     -> WHERE 'Marketing' = department AND office LIKE 'East%';
@@ -545,14 +488,6 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+----------+
 7 rows in set (0.001 sec)
 
-MariaDB [organization]> SELECT * 
-    -> FROM employees
-    -> WHERE 'Finance' = department OR "Sales' = department;
-    "> 'done';
-    "> WHERE 'Finance' = department OR "Sales' = department;
-    '> WHERE 'Finance' = department OR "Sales' = department;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Sales' = department;
-WHERE 'Finance' = department OR "Sales' = department' at line 3
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> WHERE department = 'Finance' OR department = 'Sales';
@@ -633,14 +568,6 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+-------------+
 71 rows in set (0.004 sec)
 
-MariaDB [organization]> SELECT * 
-    -> FROM employees
-    -> WHERE NOT department = "Information Technology';
-    "> WHERE NOT department = "Information Technology';
-    '> WHERE NOT department = "Information Technology';
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Information Technology';
-WHERE NOT department = "Information Technology'' at line 3
-MariaDB [organization]> 
 MariaDB [organization]> SELECT*
     -> FROM employees
     -> WHERE NOT department = 'Information Technology';
