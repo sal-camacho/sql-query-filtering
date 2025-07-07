@@ -206,6 +206,7 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+
 200 rows in set (0.001 sec
 
+ -- STEP 1: Match employees to machines using INNER JOIN   
 MariaDB [organization]> SELECT * 
     -> FROM machines
     -> INNER JOIN employees ON machines.device_id = employees.device_id;
@@ -400,6 +401,7 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 185 rows in set (0.001 sec)
 
+-- STEP 2: Show all machines, even those unassigned (LEFT JOIN)    
 MariaDB [organization]> SELECT *
     -> FROM machines
     -> LEFT JOIN employees ON machines.device_id = employees.device_id;
@@ -609,6 +611,7 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.001 sec)
 
+ -- STEP 3: Show all employees, even without machines (RIGHT JOIN)   
 MariaDB [organization]> SELECT * 
     -> FROM machines
     -> RIGHT JOIN employees ON machines.device_id = employees.device_id;
@@ -817,7 +820,8 @@ MariaDB [organization]> SELECT *
 | r520s571t459 | OS 2             | Email Client 2 | 2021-03-01    |        1199 |        1199 | r520s571t459 | areyes   | Human Resources        | East-100    |
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.002 sec)
-  
+
+   -- STEP 4: Retrieve login attempts by employees (INNER JOIN on username) 
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> INNER JOIN log_in_attempts ON employees.username = log_in_attempts.username;
