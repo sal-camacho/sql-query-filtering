@@ -1,4 +1,4 @@
-Step 1: Fetch employee device information by retrieving all records from the machines table. Include details such as device type, operating system, patch date, and employee ID.
+Step 1: Fetch employee device information by retrieving all records from the machines table. Include details such as device ID, operating system, patch date, email client, and employee ID.
 
 MariaDB [organization]> SELECT *
     -> FROM machines;
@@ -209,6 +209,7 @@ MariaDB [organization]> SELECT *
 200 rows in set (0.035 sec
 
 # Returns records from the machines table, showing device ID and email client only
+
 MariaDB [organization]> SELECT device_id, email_client 
     -> FROM machines;
 +--------------+----------------+
@@ -417,7 +418,8 @@ MariaDB [organization]> SELECT device_id, email_client
 +--------------+----------------+
 200 rows in set (0.001
 
- # Returns records from the machines table, showing device ID, operating system only
+# Returns records from the machines table, showing device ID, operating system, and patch update only.
+
 MariaDB [organization]> SELECT device_id, operating_system, OS_patch_date
     -> FROM machines;
 +--------------+------------------+---------------+
@@ -626,7 +628,7 @@ MariaDB [organization]> SELECT device_id, operating_system, OS_patch_date
 +--------------+------------------+---------------+
 200 rows in set (0.002 sec)
 
-Step 2: Investigate login activity. Returns all login attempt records from the login_attempts table for analysis.
+Step 2: Investigate login activity by retrieving login attempt records with event ID and country fields only for analysis.
 
 MariaDB [organization]> SELECT event_id, country
     -> FROM log_in_attempts;
@@ -836,6 +838,8 @@ MariaDB [organization]> SELECT event_id, country
 +----------+---------+
 200 rows in set (0.003 sec)
 
+# Investigate login activity by retrieving login attempt records with username, login date, and login time only for analysis.
+
 MariaDB [organization]> SELECT username, login_date, login_time
     -> FROM log_in_attempts;
 +----------+------------+------------+
@@ -1043,6 +1047,8 @@ MariaDB [organization]> SELECT username, login_date, login_time
 | jclark   | 2022-05-12 | 01:11:45   |
 +----------+------------+------------+
 200 rows in set (0.001 sec)
+
+# Investigate login activity by retrieving all login attempt records with details such as event ID, username, login date, login time, IP address and success category.
 
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts;
@@ -1252,7 +1258,7 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 200 rows in set (0.003 sec)
 
-Step 3: Order login attempts data. Displays login attempts in descending order by timestamp to show the most recent activity first.
+Step 3: Sort all login attempt data to display entries in descending order by timestamp, ensuring the most recent activity appears first.
 
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -1463,6 +1469,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 200 rows in set (0.018 sec)
 
+# Sort all login attempt data to display entries in descending order by login date and login time, ensuring the most recent activity appears first.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> ORDER BY login_date, login_time;
