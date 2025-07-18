@@ -1,14 +1,4 @@
-clear
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 41
-Server version: 10.3.39-MariaDB-0+deb10u2 Debian 10
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Step 1: List all organization machines. Run a SQL query to retrieve only the device_id and operating_system columns from the machines table.
 
 MariaDB [organization]> SELECT device_id, operating_system
     -> FROM machines;
@@ -218,6 +208,8 @@ MariaDB [organization]> SELECT device_id, operating_system
 +--------------+------------------+
 200 rows in set (0.089 sec)
 
+Step 2: Retrieve a list of machines running OS 2 by selecting device ID and operating system values from the machines table where the operating_system column equals 'OS 2'.
+
 MariaDB [organization]> SELECT device_id, operating_system
     -> FROM machines
     -> WHERE operating_system = 'OS 2';
@@ -307,6 +299,8 @@ MariaDB [organization]> SELECT device_id, operating_system
 +--------------+------------------+
 80 rows in set (0.001 sec)
 
+Step 3: Gather a list of all employees in the Finance and Sales departments, including their office numbers, to identify staff assigned in these specific areas.
+    
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> WHERE department = 'Finance';
@@ -354,6 +348,8 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+-------------+
 38 rows in set (0.001 sec)
 
+# Modified the previous query to return employee records from the Sales department only, for analysis of staff assigned to that division.
+
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> WHERE department = 'Sales';
@@ -396,6 +392,8 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+-------------+
 33 rows in set (0.001 sec)
 
+Step 4: Identify employee devices and create a query to determine which employee is assigned to the office labeled 'South-109'.
+    
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> WHERE office LIKE 'South-109';
@@ -406,6 +404,8 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+-----------+
 1 row in set (0.001 sec)
 
+# Modified the query used in the previous step so that it returns information on all the employees in the 'South' building.
+    
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> WHERE office LIKE 'South%';  
