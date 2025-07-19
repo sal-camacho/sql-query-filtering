@@ -1,4 +1,6 @@
-MariaDB [organization]> SELECT *
+Step 1: Retrieve login attempts after a certain date. the SQL query data for login attempts made after '2022-05-09'
+
+    MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date > '2022-05-09';
 +----------+----------+------------+------------+---------+-----------------+---------+
@@ -132,6 +134,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 125 rows in set (0.001 sec)
 
+# Complete the SQL query to retrieve data for login attempts that were made on or after '2022-05-09'
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date >= '2022-05-09';
@@ -306,6 +310,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 165 rows in set (0.001 sec)
 
+Step 2: Retrieve logins in a date range. Use the BETWEEN and AND operators to return results between '2022-05-09' and '2022-05-11'.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date BETWEEN '2022-05-09' AND '2022-05-11';
@@ -438,6 +444,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 123 rows in set (0.001 sec)
 
+Step 3: Investigate logins at certain times. Write a SQL query to retrieve data for login attempts made before '07:00:00'
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_time < '07:00:00';
@@ -514,6 +522,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 67 rows in set (0.001 sec)
 
+# Modify the query to return logins between '06:00:00' and '07:00:00'.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_time BETWEEN '06:00:00' AND '07:00:00';
@@ -538,6 +548,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 15 rows in set (0.001 sec)
 
+Step 4: Investigate logins by event ID. Write a query to return login attempts with event_id greater than or equal to 100.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE event_id >=100;
@@ -648,6 +660,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 101 rows in set (0.025 sec)
 
+# Modify the query to return only login attempts with event_id between 100 and 150.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE event_id BETWEEN '100' AND '150';
