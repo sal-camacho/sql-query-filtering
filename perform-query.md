@@ -44,7 +44,3 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 - SQL queries allow analysts to extract meaningful patterns from raw data.  
 - Sorting login attempts supports incident detection and response.  
 - Understanding table relationships helps build accurate queries for investigations.
-
-- Add terminal screenshots showing:
-  - Full table output  
-  - Sorted login attempts
