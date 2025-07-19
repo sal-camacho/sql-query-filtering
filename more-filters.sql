@@ -1,4 +1,4 @@
-Step 1: Retrieve login attempts after a certain date. the SQL query data for login attempts made after '2022-05-09'
+Step 1:Retrieve login attempts made after a specific date. The SQL query for login attempts after '2022-05-09'.
 
     MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -134,7 +134,7 @@ Step 1: Retrieve login attempts after a certain date. the SQL query data for log
 +----------+----------+------------+------------+---------+-----------------+---------+
 125 rows in set (0.001 sec)
 
-# Complete the SQL query to retrieve data for login attempts that were made on or after '2022-05-09'
+# Write an SQL query to fetch login attempts from the database that occurred on or after '2022-05-09'.
     
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -310,7 +310,7 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 165 rows in set (0.001 sec)
 
-Step 2: Retrieve logins in a date range. Use the BETWEEN and AND operators to return results between '2022-05-09' and '2022-05-11'.
+Step 2: Retrieve login records within a specific date range by using the BETWEEN and AND operators to filter results for dates between '2022-05-09' and '2022-05-11'.
     
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -444,8 +444,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 123 rows in set (0.001 sec)
 
-Step 3: Investigate logins at certain times. Write a SQL query to retrieve data for login attempts made before '07:00:00'
-    
+Step 3: Retrieve login attempts made before 07:00:00
+
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_time < '07:00:00';
