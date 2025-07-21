@@ -1,4 +1,5 @@
-MariaDB [organization]> clear
+Step 1: Retrieve failed login attempts that occurred after business hours using the AND operator to filter for these specific conditions.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_time > '18:00' AND success = 0;
@@ -27,6 +28,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 19 rows in set (0.274 sec)
 
+Step 2:Retrieve login attempts for specific dates, using the OR operator to find failed login attempts on the selected days.
+    
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
     -> WHERE login_date = '2022-05-08' OR login_date = '2022-05-09';
@@ -110,6 +113,8 @@ MariaDB [organization]> SELECT *
 |      197 | jsoto    | 2022-05-08 | 09:05:09   | US      | 192.168.36.21   |       0 |
 +----------+----------+------------+------------+---------+-----------------+---------+
 75 rows in set (0.009 sec)
+
+Step 3: Get login attempts from locations other than Mexico. Use this query to filter and retrieve attempts that occurred outside of Mexico. 
     
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -264,6 +269,8 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 144 rows in set (0.004 sec)
 
+Step 4: Retrieve employees in Marketing. Run the following query to view the columns and values in the employees table.
+    
 MariaDB [organization]> SELECT *
     -> FROM employees;
 +-------------+--------------+----------+------------------------+-------------+
@@ -471,7 +478,9 @@ MariaDB [organization]> SELECT *
 |        1199 | r520s571t459 | areyes   | Human Resources        | East-100    |
 +-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.002 sec)
-    
+
+#Write a query to fetch all columns from the employees table, applying filters on the department and office columns. The query should return records for employees in the 'Marketing' department who are based in any office within the East building ( 'East-170', 'East-320').
+
 MariaDB [organization]> SELECT * 
     -> FROM employees
     -> WHERE 'Marketing' = department AND office LIKE 'East%';
@@ -488,6 +497,8 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+----------+
 7 rows in set (0.001 sec)
 
+Step 5: Write a SQL query to retrieve records for employees in the 'Finance' or the 'Sales' department.
+    
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> WHERE department = 'Finance' OR department = 'Sales';
@@ -568,6 +579,8 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------+-------------+
 71 rows in set (0.004 sec)
 
+Step 6: Write a SQL query to retrieve records for employees who are not in the 'Information Technology' department.
+    
 MariaDB [organization]> SELECT*
     -> FROM employees
     -> WHERE NOT department = 'Information Technology';
