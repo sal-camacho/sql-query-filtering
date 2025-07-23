@@ -15,15 +15,15 @@ This report was completed as part of the Google Cybersecurity Certificate. It de
 
 ## My Contributions
 
-### Task 1. Match employees to their machines
+## Match employees to their machines
 - Used `INNER JOIN` between `machines` and `employees` tables using the `device_id` column  
 - Confirmed 185 matched records showing which employees are actively assigned to devices  
 
-### Task 2. Return more data using LEFT and RIGHT JOIN
+## Return more data using LEFT and RIGHT JOIN
 - Applied a `LEFT JOIN` to display all machines, including those not yet linked to any employee  
 - Executed a `RIGHT JOIN` to show all employees, even those without a machine assignment  
 
-### Task 3. Retrieve login attempt data
+## Retrieve login attempt data
 - Performed an `INNER JOIN` using the `username` column between `employees` and `log_in_attempts`  
 - Returned 200 records capturing employee login behavior for incident analysis  
 
