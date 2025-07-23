@@ -20,27 +20,27 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 
 ## My Contributions
 
-- **Filter for after-hours failed login attempts**  
+- **Identified failed logins after office hours**  
   - Used `WHERE login_time > '18:00' AND success = FALSE;`  
   - Retrieved 19 failed login attempts occurring after business hours
 
-- **Filter for login attempts on specific dates**  
+- **Pulled login records from critical dates**  
   - Used `WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';`  
   - Identified 75 login attempts made across two days of investigation
 
-- **Filter for login attempts outside of Mexico**  
+- **Excluded logins originating from Mexico**  
   - Used `WHERE NOT country LIKE 'MEX%';` to exclude Mexican-origin logins  
   - Retrieved 144 login attempts outside of Mexico for deeper analysis
 
-- **Filter for employees in Marketing located in East offices**  
+- **Isolated East office Marketing employees**  
   - Used `WHERE department = 'Marketing' AND office LIKE 'East%';`  
   - Found user `elarson` among East-building Marketing team
 
-- **Filter for employees in Finance or Sales departments**  
+- **Searched for users in Finance or Sales**  
   - Used `WHERE department = 'Finance' OR department = 'Sales';`  
   - Found user `lrodriqu` among first returned Sales employees
 
-- **Filter for employees not in the Information Technology department**  
+- **Filtered out Information Technology employees**  
   - Used `WHERE NOT department = 'Information Technology';`  
   - Retrieved 161 employees outside the IT department scope
 
