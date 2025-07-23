@@ -1,8 +1,11 @@
-# Use SQL Joins to Investigate Employee, Machine, and Login Data
+# Activity Overview
+As a security analyst, you’ll often find that you need data from more than one table.
 
-You explored different join techniques in SQL to combine data across multiple tables. This activity involved matching employees to their machines, identifying unmatched records, and analyzing login attempt behavior. These skills are key when tracing connections across systems in a cybersecurity environment.
+Previously, you learned that a relational database is a structured database containing tables that are related to each other.
 
-You should know how to:
+SQL joins enable you to combine tables that contain a shared column. This is helpful when you need to connect information that appears in different tables.
+
+In this activity, you’ll use SQL joins to connect separate tables and retrieve needed information.
 - Use `INNER JOIN` to match records between tables  
 - Apply `LEFT JOIN` and `RIGHT JOIN` to capture unmatched entries from each side  
 - Join tables using shared keys like `device_id` and `username`  
