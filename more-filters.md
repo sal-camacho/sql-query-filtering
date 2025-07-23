@@ -1,29 +1,16 @@
 # Activity Overview
+As a security analyst, you’ll often need to query numbers and dates.
 
-You learned how to apply filters to refine SQL queries using comparison and logical operators. This activity focused on filtering by dates, numbers, and string values in support of security investigations. As a security analyst, using multiple filter conditions helps isolate relevant login data and employee information quickly and efficiently.
+For example, you may need to filter patch dates to find machines that need an update. Or you might filter login attempts made during a certain period of time to investigate a security incident.
 
-You should know how to:
-- Use `WHERE` with operators like `=`, `>`, `<`, `<=`, and `<>`
-- Apply `AND`, `OR`, and `NOT` to layer conditions
-- Filter by date, number, and string fields
-- Combine filters to narrow or broaden results
+Common operators for working with numeric or date and time data will help you accurately filter data. These are some of the operators you'll use:
 
----
-
-## Perform a SQL Query — Apply Multiple Filters to Security Data
-
-This report was completed as part of the Google Cybersecurity Certificate. It documents how to refine SQL queries in the MariaDB shell by applying multiple filters across various data types. These skills are essential for investigating login anomalies, isolating employee records, and identifying patterns across logs.
-
-## My Contributions
-# Apply More Filters in SQL
-
-You learned how to apply more specific filters in SQL using comparison and range operators to retrieve relevant records for security investigations. This activity emphasized filtering by date, time, and event ID to isolate login behavior. These techniques are critical for narrowing data and identifying suspicious or noteworthy activity.
-
-You should know how to:
-- Use comparison operators (`=`, `>`, `<`, `>=`, `<=`, `<>`) to target records  
-- Filter data using `BETWEEN` for inclusive date or time ranges  
-- Narrow queries using event identifiers  
-- Apply layered filtering based on timeframes and conditions
+- = (equal)
+- '>' (greater than)
+- < (less than)
+- <> (not equal to)
+- '>=' (greater than or equal to)
+- <= (less than or equal to)
 
 ---
 
@@ -46,17 +33,10 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 
 ## Tools Used
 
-- `WHERE` — apply filtering logic to database queries  
-- Comparison operators (`>`, `>=`, `<`, `<=`, `=`, `<>`) — used across date
-
----
-
-## Tools Used
-
 - `SELECT` — retrieve data from a table  
 - `WHERE` — apply filters to refine results  
 - `AND`, `OR`, `NOT` — logical operators for combining/excluding conditions  
-- `>`, `<`, `<>` — comparison operators for date, time, and number filters  
+- `>`, `>=`, `<`, `<=`, `=`, `<>` — comparison operators for date, time, and number filters  
 - `LIKE` — pattern matching for string fields
 
 ---
