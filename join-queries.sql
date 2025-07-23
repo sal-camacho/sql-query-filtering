@@ -1,4 +1,4 @@
-Step 1:Match employees with their machines. Use the following query to fetch all records from the machines table.
+Step 1: Match employees with their machines. Use the following query to fetch all records from the machines table.
 
 MariaDB [organization]> SELECT *
     -> FROM machines;
@@ -826,7 +826,7 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.002 sec)
 
-Step 3: Retrieve login attempt data. Run the following SQL query to perform an inner join on the employees and log_in_attempts tables.
+Step 3: Retrieve data on login attempts by running this query to perform an inner join between the employees and log_in_attempts tables.
     
 MariaDB [organization]> SELECT *
     -> FROM employees
