@@ -20,15 +20,20 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 
 ## My Contributions
 
-- Retrieved login attempts made after a specified date to evaluate post-incident activity  
-- Refined the same query to include a specific start date for a broader investigation window  
-- Used inclusive ranges to isolate login events between key dates  
-- Investigated logins occurring before standard work hours to identify off-hour access  
-- Narrowed time-based filters to focus between 06:00:00 and 07:00:00  
-- Queried login attempts using event IDs to focus on individual events  
-- Applied range filters to event IDs for grouped review of login behavior  
-- Interpreted result records to extract usernames and timestamps relevant to the security scenario
+- **Filtered by date**
+  - Retrieved logins after a specific date  
+  - Expanded query to include a set starting date  
+  - Used a date range to focus results between known incident days
 
+- **Filtered by time**
+  - Investigated login attempts before work hours  
+  - Narrowed query to logins between 06:00:00 and 07:00:00
+
+- **Filtered by event ID**
+  - Retrieved specific login events using `event_id`  
+  - Applied range filtering to view grouped login actions  
+  - Targeted result columns to focus on `event_id`, `username`, and `login_date`
+    
 ---
 
 ## Tools Used
@@ -43,8 +48,6 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 
 ## Reflections
 
-- Filtering by multiple conditions sharpens your queries for focused analysis  
-- Logical operators (`AND`, `OR`, `NOT`) create flexible and layered search logic  
-- Date and time filtering supports timeline investigations during breach detection  
-- Exclusion filters (`NOT`, `<>`) reduce noise and isolate relevant entries  
-- Combining tools helps prepare clean datasets for reporting and decision-making
+- Filtering by time, date, and ID improves incident traceability and investigation accuracy  
+- Inclusive range filtering simplifies multi-day or hour-by-hour analysis  
+- Selecting specific columns strengthens query focus and supports clean reporting
