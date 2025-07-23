@@ -39,9 +39,3 @@ Feel free to connect if you're interested in:
 - Reviewing query structure or Markdown formatting  
 - Sharing best practices on data filtering and relational joins  
 - Exploring cybersecurity use cases and incident reporting in SQL
-
----
-
-## About
-
-This portfolio highlights my structured approach to SQL query development in support of cybersecurity readiness. Built during the Google Cybersecurity Certificate, each entry documents my ability to work with relational databases, filter results based on security criteria, and interpret findings within real investigative scenarios.
