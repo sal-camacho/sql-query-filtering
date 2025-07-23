@@ -1,4 +1,4 @@
-Step 1:Retrieve login attempts made after a specific date. The SQL query for login attempts after '2022-05-09'.
+Step 1: Retrieve login attempts made after a specific date. The SQL query for login attempts after '2022-05-09'.
 
     MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
