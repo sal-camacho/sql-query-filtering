@@ -1,3 +1,5 @@
+Step 1:Match employees with their machines. Use the following query to fetch all records from the machines table.
+
 MariaDB [organization]> SELECT *
     -> FROM machines;
 +--------------+------------------+----------------+---------------+-------------+
@@ -206,7 +208,8 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+
 200 rows in set (0.001 sec
 
- -- STEP 1: Match employees to machines using INNER JOIN   
+# To complete a join, you need to link the tables being joined using a common column. For the employees and machines tables, the common column is the device_id.
+
 MariaDB [organization]> SELECT * 
     -> FROM machines
     -> INNER JOIN employees ON machines.device_id = employees.device_id;
@@ -401,7 +404,8 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 185 rows in set (0.001 sec)
 
--- STEP 2: Show all machines, even those unassigned (LEFT JOIN)    
+Step 2: Provide additional data by executing the query below to link the machines and employees tables using a left join.
+    
 MariaDB [organization]> SELECT *
     -> FROM machines
     -> LEFT JOIN employees ON machines.device_id = employees.device_id;
@@ -611,7 +615,8 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.001 sec)
 
- -- STEP 3: Show all employees, even without machines (RIGHT JOIN)   
+# Use the following query to connect the machines and employees tables with a right join.
+    
 MariaDB [organization]> SELECT * 
     -> FROM machines
     -> RIGHT JOIN employees ON machines.device_id = employees.device_id;
@@ -821,7 +826,8 @@ MariaDB [organization]> SELECT *
 +--------------+------------------+----------------+---------------+-------------+-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.002 sec)
 
-   -- STEP 4: Retrieve login attempts by employees (INNER JOIN on username) 
+Step 3: Retrieve login attempt data. Run the following SQL query to perform an inner join on the employees and log_in_attempts tables.
+    
 MariaDB [organization]> SELECT *
     -> FROM employees
     -> INNER JOIN log_in_attempts ON employees.username = log_in_attempts.username;
