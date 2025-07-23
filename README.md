@@ -34,9 +34,3 @@ This repo features:
 ## Contact & Collaboration
 
 This repository reflects my SQL development journey and cybersecurity training. I'm open to suggestions and collaborations aimed at strengthening technical depth, documentation clarity, and professional growth.
-
-Feel free to connect if you're interested in:
-
-- Reviewing query structure or Markdown formatting  
-- Sharing best practices on data filtering and relational joins  
-- Exploring cybersecurity use cases and incident reporting in SQL
