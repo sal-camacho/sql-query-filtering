@@ -20,59 +20,29 @@ This report was completed as part of the Google Cybersecurity Certificate. It do
 
 ## My Contributions
 
-- **Retrieve failed login attempts after hours**
-  - Used `AND` to combine time and success conditions  
-  - Queried `log_in_attempts` with:
-    ```sql
-    SELECT * 
-    FROM log_in_attempts 
-    WHERE login_time > '18:00' AND success = FALSE;
-    ```
+- **Filter for after-hours failed login attempts**  
+  - Used `WHERE login_time > '18:00' AND success = FALSE;`  
+  - Retrieved 19 failed login attempts occurring after business hours
 
-- **Retrieve login attempts on specific dates**
-  - Used `OR` to combine two date filters  
-  - Queried `log_in_attempts` with:
-    ```sql
-    SELECT * 
-    FROM log_in_attempts 
-    WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';
-    ```
+- **Filter for login attempts on specific dates**  
+  - Used `WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';`  
+  - Identified 75 login attempts made across two days of investigation
 
-- **Exclude login attempts from Mexico**
-  - Used `NOT` and `LIKE` to remove rows starting with 'MEX'  
-  - Queried `log_in_attempts` with:
-    ```sql
-    SELECT * 
-    FROM log_in_attempts 
-    WHERE NOT country LIKE 'MEX%';
-    ```
+- **Filter for login attempts outside of Mexico**  
+  - Used `WHERE NOT country LIKE 'MEX%';` to exclude Mexican-origin logins  
+  - Retrieved 144 login attempts outside of Mexico for deeper analysis
 
-- **Filter employees in Marketing, East offices**
-  - Used `AND` and `LIKE` on `department` and `office` fields  
-  - Queried `employees` with:
-    ```sql
-    SELECT * 
-    FROM employees 
-    WHERE department = 'Marketing' AND office LIKE 'East%';
-    ```
+- **Filter for employees in Marketing located in East offices**  
+  - Used `WHERE department = 'Marketing' AND office LIKE 'East%';`  
+  - Found user `elarson` among East-building Marketing team
 
-- **Retrieve employees in Finance or Sales**
-  - Used `OR` on the same column to include multiple departments  
-  - Queried `employees` with:
-    ```sql
-    SELECT * 
-    FROM employees 
-    WHERE department = 'Finance' OR department = 'Sales';
-    ```
+- **Filter for employees in Finance or Sales departments**  
+  - Used `WHERE department = 'Finance' OR department = 'Sales';`  
+  - Found user `lrodriqu` among first returned Sales employees
 
-- **Exclude employees in Information Technology**
-  - Used `NOT` to remove rows from a specific department  
-  - Queried `employees` with:
-    ```sql
-    SELECT * 
-    FROM employees 
-    WHERE NOT department = 'Information Technology';
-    ```
+- **Filter for employees not in the Information Technology department**  
+  - Used `WHERE NOT department = 'Information Technology';`  
+  - Retrieved 161 employees outside the IT department scope
 
 ---
 
