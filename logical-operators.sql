@@ -28,7 +28,7 @@ MariaDB [organization]> SELECT *
 +----------+----------+------------+------------+---------+-----------------+---------+
 19 rows in set (0.274 sec)
 
-Step 2:Retrieve login attempts for specific dates, using the OR operator to find failed login attempts on the selected days.
+Step 2: Retrieve login attempts for specific dates, using the OR operator to find failed login attempts on the selected days.
     
 MariaDB [organization]> SELECT *
     -> FROM log_in_attempts
@@ -479,7 +479,7 @@ MariaDB [organization]> SELECT *
 +-------------+--------------+----------+------------------------+-------------+
 200 rows in set (0.002 sec)
 
-#Write a query to fetch all columns from the employees table, applying filters on the department and office columns. The query should return records for employees in the 'Marketing' department who are based in any office within the East building ( 'East-170', 'East-320').
+# Write a query to fetch all columns from the employees table, applying filters on the department and office columns. The query should return records for employees in the 'Marketing' department who are based in any office within the East building ( 'East-170', 'East-320').
 
 MariaDB [organization]> SELECT * 
     -> FROM employees
