@@ -23,10 +23,11 @@ This repo features:
 
 | Report Title             | Description                                                                 |
 |--------------------------|-----------------------------------------------------------------------------|
-| `comparison-operators.md` | Filters records using date/time and value comparisons (`>`, `<`, `>=`)       |
-| `logical-operators.md`    | Applies layered filtering using `AND`, `OR`, and `NOT` for login and employee queries |
-| `more-filters.md`         | Expands date and time filtering with `BETWEEN` and refines output by column |
-| `join-queries.md`         | Connects tables using joins to match employees to machines and login activity |
+| `perform-query.md`       | Initiates basic filtering to retrieve login records for a specific date     |
+| `query-filter.md`        | Applies time-based filters to highlight early login activity and behavior   |
+| `logical-operators.md`   | Uses `AND`, `OR`, and `NOT` to narrow results across login and employee data |
+| `more-filters.md`        | Builds on filtering techniques with comparison and range logic (`BETWEEN`)  |
+| `join-queries.md`        | Performs `INNER`, `LEFT`, and `RIGHT JOIN` to connect employees with machines and login attempts |
 
 ---
 
