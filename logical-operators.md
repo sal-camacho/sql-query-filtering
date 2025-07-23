@@ -14,7 +14,7 @@ You should know how to:
 
 ---
 
-## Perform a SQL Query — Use Logical Operators to Filter Results
+## Perform A Query — Use Logical Operators to Filter Results
 
 This report was completed as part of the Google Cybersecurity Certificate. It documents how to use SQL logical operators in the MariaDB shell to extract meaningful records from organizational datasets. These skills are critical for cybersecurity analysts working with login data, employee systems, and cross-departmental updates.
 
